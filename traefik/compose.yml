@@ -3,6 +3,7 @@ networks:
   # will have to be attached to this network
   traefik_network:
     name: traefik_network
+    external: true
 
 services:
   traefik:
