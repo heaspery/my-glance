@@ -2,7 +2,7 @@
 
 This is my Glance instance, developed for personal news aggregation: development, world news, culture, and gaming.
 
-You can visit the live version at [info.ancay.ch](https://info.ancay.ch).
+You can visit the live version at [info.ancay.ch](http://info.ancay.ch).
 
 # How to use it
 
