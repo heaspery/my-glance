@@ -1,14 +1,31 @@
+networks:
+  traefik_network:
+    # We use an external network as it is created by Traefik
+    external: true
+
+
 services:
   glance:
     container_name: glance
     image: glanceapp/glance
     restart: unless-stopped
+    networks:
+      - traefik_network
+    expose:
+      - 80
     volumes:
       - ./config:/app/config
       - ./assets:/app/assets
       - /etc/localtime:/etc/localtime:ro
       # Optionally, also mount docker socket if you want to use the docker containers widget
       # - /var/run/docker.sock:/var/run/docker.sock:ro
-    ports:
-      - 8080:8080
+    labels:
+      ## Traefik
+      - traefik.enable=true
+      ## Routers
+      # ATTENTION: each container must have different routers' names.
+      # In this case, the routers' names for this service is `whoami-with-host-based-routing`.
+      # Other services must have different routers' names.
+      - traefik.http.routers.glance.entrypoints=https
+      - traefik.http.routers.glance.rule=Host(`${GLANCE_FULLY_QUALIFIED_DOMAIN_NAME}`)
     env_file: .env
