@@ -11,3 +11,6 @@ After cloning the project, you can run it with Docker:
 ```bash
 docker compose up
 ```
+
+# Credits
+You can check the official project here : [GitHub Glance](https://github.com/glanceapp)
