@@ -1,0 +1,100 @@
+- name: Home
+  # Optionally, if you only have a single page you can hide the desktop navigation for a cleaner look
+  # hide-desktop-navigation: true
+  columns:
+    - size: small
+      widgets:
+        - type: rss
+          limit: 10
+          collapse-after: 5
+          cache: 12h
+          feeds:
+            - url: https://www.w3.org/WAI/news/feed.xml
+              title: W3C WAI News 
+
+            - url: https://css-tricks.com/feed/
+              title: CSS-Tricks
+
+
+
+        - type: twitch-channels
+          channels:
+            - theprimeagen
+            - theo
+            - codinggarden
+            - jherr
+            - BenAwad
+            - christitustech
+            - sentdex
+            - mCoding
+            - j_blow
+            - piratesoftware
+    
+
+    - size: full
+      widgets:
+        - type: group
+          widgets:
+            - type: hacker-news
+            - type: lobsters
+
+        - type: videos
+          channels:
+            - UCXuqSBlHAE6Xw-yeJA0Tunw # Linus Tech Tips
+            - UCR-DXc1voovS8nhAvccRZhg # Jeff Geerling
+            - UCsBjURrPoezykLs9EqgamOA # Fireship
+            - UCBJycsmduvYEL83R_U4JriQ # Marques Brownlee
+            - UCHnyfMqiRRG1u-2MsSQLbXA # Veritasium
+
+        - type: group
+          widgets:
+            - type: reddit
+              subreddit: technology
+              show-thumbnails: true
+            - type: reddit
+              subreddit: gamedev
+              show-thumbnails: true
+            - type: reddit
+              subreddit: programming
+              show-thumbnails: true
+            - type: reddit
+              subreddit: webdev
+              show-thumbnails: true 
+        - type: group
+          widgets:
+            - type: reddit
+              subreddit: design
+              show-thumbnails: true
+            - type: reddit
+              subreddit: UXDesign
+              show-thumbnails: true
+            - type: reddit
+              subreddit: DigitalArt
+              show-thumbnails: true
+            - type: reddit
+              subreddit: figma
+              show-thumbnails: true
+            - type: reddit
+              subreddit: adobe
+              show-thumbnails: true
+        - type: group
+          widgets:
+            - type: reddit
+              subreddit: museums
+              show-thumbnails: true
+            - type: reddit
+              subreddit: culture
+              show-thumbnails: true
+    - size: small
+      widgets:
+        - type: rss
+          limit: 10
+          collapse-after: 5
+          cache: 12h
+          feeds:
+            - url: https://digitalhumanitiesnow.org/feed/
+              title: Digital Humanities Now 
+
+                
+                
+                    

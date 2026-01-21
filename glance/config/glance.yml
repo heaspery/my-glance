@@ -1,0 +1,16 @@
+server:
+  assets-path: /app/assets
+
+theme:
+  background-color: 240 27 11
+  contrast-multiplier: 1.5
+  primary-color: 321 100 71
+  positive-color: 165 78 51
+  negative-color: 360 100 71
+
+pages:
+  # It's not necessary to create a new file for each page and include it, you can simply
+  # put its contents here, though multiple pages are easier to manage when separated
+  - $include: home.yml
+  - $include: gaming.yml
+  - $include: news.yml
